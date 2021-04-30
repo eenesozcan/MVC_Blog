@@ -24,6 +24,5 @@ namespace EntityLayer.Concrete
         public virtual Writer Writer { get; set; }
 
         public ICollection<Content> Contents { get; set; }
-        //yazar ilişkili yapı ile
     }
 }

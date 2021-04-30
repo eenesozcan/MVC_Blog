@@ -27,7 +27,9 @@ namespace EntityLayer.Concrete
         [StringLength(20)]
         public string WriterPassword { get; set; }
 
-        public ICollection<Heading> Headings { get; set; }
+        public ICollection<Heading> Headings { get; set; } //yazar bir  başlıklar çok
         public ICollection<Content> Contents { get; set; }
+
+       
     }
 }

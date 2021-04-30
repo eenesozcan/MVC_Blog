@@ -9,9 +9,11 @@ namespace DataAccessLayer.Abstract
 {
     public interface IRepository<T>
     {
+        //Burası CRUD operasyonlarının gerçekleşeceği methotların tanımladığı yer
+
         List<T> List();
 
-        void Insert(T p);
+        void Insert(T p); //T sınıfından gelen bir p parametresi 
 
         void Delete(T p);
 

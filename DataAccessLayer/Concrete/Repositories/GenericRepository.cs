@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete.Repositories
 {
-    public class GenericRepository<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IRepository<T> where T : class  // T : class > T değeri bir class olmalı
     {
 
         Context c = new Context();
 
         DbSet<T> _object;
 
-        public GenericRepository() // contractor methot
+        public GenericRepository() // contractor methot > ctor tab tab
         {
             _object = c.Set<T>();
         }
