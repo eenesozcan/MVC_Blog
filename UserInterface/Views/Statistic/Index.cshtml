@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>İstatistikler</h2>
+
+<html>
+<head>
+
+</head>
+<br />  
+<body>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="small-box bg-success" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Toplam Kategori Sayısı</sup>
+                    <br />
+                    <span style="font-size:75px"> @ViewBag.totalNumberOfCategories </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-red" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Yazılım Kategorisi Başlık Sayısı</sup>
+                    <br />
+                    <span style="font-size:75px"> @ViewBag.softwareCategoryTitleNumber </span>
+                    <span style="font-size:75px"> @ViewBag.writerNameSortByA </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-purple" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Yazar adında "a" harfi geçen yazar sayısı</sup>
+                    <br />
+                    <span style="font-size:75px"> @ViewBag.writerNameSortByA </span>
+                    <h1></h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-blue" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">En fazla başlığa sahip kategori adı</sup>
+                    <br />
+                    <span style="font-size:75px"> @ViewBag.categoryNameWithTheMostTitles </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="small-box bg-orange" style="max-height: 150px">
+                <div class="inner" style="text-align: center">
+                    <br />
+                    <sup style="font-size: 20px">Kategori tablosunda durumu true olanlar</sup>
+                    <br />
+                    <span style="font-size:75px"> @ViewBag.activeCategories </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

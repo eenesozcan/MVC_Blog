@@ -15,6 +15,8 @@ namespace DataAccessLayer.Abstract
 
         void Insert(T p); //T sınıfından gelen bir p parametresi 
 
+        T Get(Expression<Func<T, bool>> filter); // silme işlemleri için id'yi buldurma için kullanılacak
+
         void Delete(T p);
 
         void Update(T p);

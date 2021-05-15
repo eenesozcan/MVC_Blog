@@ -27,6 +27,11 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);   //SingleOrDefault bir dizi veya listede sadece bir tane değeri geriye döndürmek için kullanılan entity framework LINQ methodudur.   bu methodun içine filter'dan gelen parametreyi gönderdik
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
