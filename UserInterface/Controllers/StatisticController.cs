@@ -17,7 +17,7 @@ namespace UserInterface.Controllers
             var totalCategory = _context.Categories.Count(); //Toplam Kategori Sayisi
             ViewBag.totalNumberOfCategories = totalCategory;
 
-            var softwareCategory = _context.Headings.Count(x => x.CategoryID == 16); // Yazilim Kategorisi id 16, başlik sayisi
+            var softwareCategory = _context.Headings.Count(x => x.CategoryID == 6); // Yazilim Kategorisi id 6, başlik sayisi
             ViewBag.softwareCategoryTitleNumber = softwareCategory;
 
             var writerNameSortByA = _context.Writers.Count(x => x.WriterName.Contains("a")); // Yazar adinda "a" harfi gecen yazar sayisi
