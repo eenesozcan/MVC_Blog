@@ -12,6 +12,7 @@ namespace BusinessLayer.ValidationRules
     {
         public WriterValidator()
         {
+
             RuleFor(x => x.WriterName).NotEmpty().WithMessage("Yazar Adı Boş Geçilemez");
             RuleFor(x => x.WriterSurname).NotEmpty().WithMessage("Yazar Soyadı Boş Geçilemez");
             //hakkında kısmında a karakteri geçmesi zorunlu olacak
