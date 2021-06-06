@@ -12,6 +12,8 @@ namespace UserInterface.Controllers
     public class ContactController : Controller
     {
         ContactManager cm = new ContactManager(new EfContactDal());
+        MessageManager mm = new MessageManager(new EfMessageDal());
+
         ContactValidator cv = new ContactValidator();
         public ActionResult Index()
         {
@@ -21,6 +23,20 @@ namespace UserInterface.Controllers
 
         public PartialViewResult ContactPartial()
         {
+
+            var count1 = cm.GetList().Count();
+            ViewBag.countcontact = count1;
+
+            var count2 = mm.GetListInbox().Count();
+            ViewBag.countinbox = count2;
+
+            var count3 = mm.GetListSendbox().Count();
+            ViewBag.countsendbox = count3;
+
+            //var draft = cm.GetList().Where(x => x.UserID == true).Count();
+            //ViewBag.draft = draft;
+
+
             return PartialView();
         }
 
@@ -29,5 +45,6 @@ namespace UserInterface.Controllers
             var contactvalues = cm.GetByID(id);
             return View(contactvalues);
         }
+
     }
 }
